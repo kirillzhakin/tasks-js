@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./input.css" rel="stylesheet" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <title>Tasks</title>
+  </head>
+  <body>
+    <main class="main">
+      <form class="form" name="add">
+        <h1 class="form__title">Мой список дел</h1>
+        <div class="form__box">
+          <input
+            type="text"
+            name="input"
+            autocomplete="off"
+            placeholder="Название..."
+            class="form__input"
+          />
+          <button class="form__submit">Создать</button>
+        </div>
+        <p class="form__error"></p>
+      </form>
+      <section class="tasks-container"></section>
+    </main>
+
+    <template id="task-template">
+      <div class="task">
+        <h4 class="task__title"></h4>
+        <button class="task__delete"><span>&#x2715;</span></button>
+      </div>
+    </template>
+
+    <script src="index.js"></script>
+  </body>
+</html>
