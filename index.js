@@ -16,6 +16,8 @@ const deleteTask = (e) => {
   const taskFillter = tasksArray.filter((task) => task !== data);
   console.log(taskFillter);
   localStorage.setItem("tasks", JSON.stringify(taskFillter));
+  tasksArray = taskFillter
+
 };
 
 // Отметить задачу
