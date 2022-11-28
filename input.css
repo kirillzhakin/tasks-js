@@ -74,7 +74,6 @@ body {
 
 .task {
   position: relative;
-
   font-size: 18px;
   line-height: 20px;
   background: #eee;
@@ -82,11 +81,12 @@ body {
   transition: 0.2s;
   user-select: none;
 }
-.tasks-container.task:nth-child(odd) {
+
+.tasks-container div:nth-child(odd) {
   background: #f9f9f9;
 }
 
-.tasks-container.task:nth-child(odd):hover,
+.tasks-container div:nth-child(odd):hover,
 .task:hover {
   background: #ddd;
 }
