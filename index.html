@@ -20,16 +20,37 @@
             placeholder="Название..."
             class="form__input"
           />
+          <input type="date" name="date" class="form__input" />
+          <select name="priority" class="form__input">
+            <option value="Высокий">Высокий</option>
+            <option value="Средний" selected>Средний</option>
+            <option value="Низкий">Низкий</option>
+          </select>
+
           <button class="form__submit">Создать</button>
         </div>
         <p class="form__error"></p>
       </form>
+      <section class="control">
+        <select name="ready" id="ready" class="control__select">
+          <option value="all" selected>Все задачи</option>
+          <option value="true">Выполненые</option>
+          <option value="false">Невыполненные</option>
+        </select>
+        <select name="sort" id="sort" class="control__select">
+          <option value="create" selected>По дате создания</option>
+          <option value="dedline">По дате завершения</option>
+          <option value="priorityIndex">По приоритету</option>
+        </select>
+      </section>
       <section class="tasks-container"></section>
     </main>
 
     <template id="task-template">
       <div class="task">
         <h4 class="task__title"></h4>
+        <p class="task__date"></p>
+        <p class="task__priority"></p>
         <button class="task__delete"><span>&#x2715;</span></button>
       </div>
     </template>

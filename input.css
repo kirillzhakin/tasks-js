@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities; */
 
+@import url("./styles/form/form.css");
+@import url("./styles/task/task.css");
+@import url("./styles/control/control.css");
+
 body {
   background: #fff;
   font-family: Verdana, sans-serif;
@@ -16,125 +20,4 @@ body {
   margin: 0 auto 0 auto;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  background-color: #f44336;
-  width: 100%;
-  height: 137px;
-  margin: 50px 0 0 0;
-  padding: 26px;
-}
 
-.form__title {
-  text-align: center;
-  color: white;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.form__box {
-  display: grid;
-  grid-template-columns: 600px 1fr;
-  margin-top: 15px;
-}
-
-.form__input {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid transparent;
-}
-
-.form__input:focus {
-  border: 1px solid #000000;
-  outline: none;
-}
-.form__submit {
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.form__submit:hover {
-  background-color: #bbb;
-}
-
-.form__error {
-  color: rgb(193, 193, 252);
-  font-size: 12px;
-  line-height: 14px;
-  margin: 4px auto 0 auto;
-}
-
-.task {
-  position: relative;
-  font-size: 18px;
-  line-height: 20px;
-  background: #eee;
-  cursor: pointer;
-  transition: 0.2s;
-  user-select: none;
-}
-
-.tasks-container div:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-.tasks-container div:nth-child(odd):hover,
-.task:hover {
-  background: #ddd;
-}
-.task__title {
-  padding: 10px 8px 10px 40px;
-}
-
-.task__delete {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 10px;
-  line-height: 10px;
-  padding: 15px;
-  height: 40px;
-}
-
-.task__delete:hover {
-  color: #fff;
-  background-color: #f44336;
-}
-
-.button_disabled {
-  color: #fff;
-  opacity: 0.9;
-  pointer-events: none;
-  user-select: none;
-}
-
-.task_checked {
-  position: relative;
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
-.task_checked::before {
-  content: "";
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-.task_checked:hover {
-  background: #888;
-}

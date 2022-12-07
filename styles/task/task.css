@@ -1,0 +1,77 @@
+.task {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr 1fr;
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  background: #eee;
+  cursor: pointer;
+  transition: 0.3s;
+  user-select: none;
+  padding: 10px 40px 10px 26px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.tasks-container .task:nth-child(odd) {
+  background: #f9f9f9;
+  transition: 0.3s;
+}
+
+.tasks-container .task:nth-child(odd):hover,
+.task:hover {
+  background: #ddd;
+}
+.tasks-container .task_checked:nth-child(odd),
+.task_checked {
+  position: relative;
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+.task_checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+  transition: 0.3s;
+}
+.tasks-container .task_checked:nth-child(odd):hover,
+.task_checked:hover {
+  background: #888;
+}
+
+.task__title {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+
+.task__delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+  line-height: 10px;
+  padding: 15px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.task__delete:hover {
+  color: #fff;
+  background-color: #f44336;
+}
+
+
+.task_hide {
+  display: none;
+}
